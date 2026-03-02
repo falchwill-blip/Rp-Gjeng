@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>RP Gjeng Økonomi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>💼 Gjengens Økonomi</h1>
+
+    <div class="form">
+        <input type="text" id="name" placeholder="Navn">
+        <input type="text" id="reason" placeholder="Hva gjelder det?">
+        <input type="number" id="amount" placeholder="Beløp (kr)">
+        <select id="type">
+            <option value="inn">Innbetaling</option>
+            <option value="ut">Utgift</option>
+        </select>
+        <button onclick="addTransaction()">Legg til</button>
+    </div>
+
+    <h2>📜 Transaksjonslogg</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Beskrivelse</th>
+                <th>Beløp</th>
+                <th>Type</th>
+                <th>Dato</th>
+                <th>Slett</th>
+            </tr>
+        </thead>
+        <tbody id="transactionList"></tbody>
+    </table>
+
+    <div class="summary">
+        <h2 id="balance">Total Balanse: 0 kr</h2>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
